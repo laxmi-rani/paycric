@@ -9,7 +9,8 @@
 
 <ion-content padding>
     <div padding>
-        <button ion-button block>Login with Facebook</button>
+        <button ion-button block (click)="loginFb()">Login with Facebook</button>
+        <button ion-button block (click)="loginGoogle()">Login with Gmail</button>
     </div>
   <ion-list>
 
@@ -36,3 +37,7 @@
       </ion-row>
     </ion-grid>
 </ion-content>
+
+<ion-card *ngIf="userData">
+  <ion-card-header>{{userData.username}}</ion-card-header>
+</ion-card>

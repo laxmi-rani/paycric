@@ -7,20 +7,23 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.paycrik"
     },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.starter"
+    "cordova-plugin-googleplus": {
+      "PACKAGE_NAME": "com.paycrik"
     },
     "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.paycrik"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.paycrik"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.paycrik"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.paycrik"
     }
   },
   "dependent_plugins": {}
