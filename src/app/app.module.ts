@@ -1,17 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { userService } from '../app/services/users.service';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import { AccountPage } from '../pages/account/account';
+import { TransactionPage } from '../pages/transaction/transaction';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { MenuPage } from '../pages/menu/menu';
 import { MainPage } from '../pages/main/main';
- import { Facebook }  from "@ionic-native/facebook";
- import { GooglePlus } from "@ionic-native/google-plus";
+import { Facebook }  from "@ionic-native/facebook";
+import { GooglePlus } from "@ionic-native/google-plus";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Stripe } from '@ionic-native/stripe';
+import { CardPage } from '../pages/card/card';
 
 // export const firebaseConfig = {
 //     apiKey: "AIzaSyD0xZHOedjw2USVPfOlZ6Wp6x-J6Pmt7m0",
@@ -29,11 +34,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginPage,
     RegisterPage,
     MainPage,
-    MenuPage
+    MenuPage,
+    AccountPage,
+    TransactionPage,
+    CardPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp), FormsModule, ReactiveFormsModule,
+    IonicModule.forRoot(MyApp), FormsModule, ReactiveFormsModule, HttpClientModule
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
@@ -42,13 +50,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginPage,
     RegisterPage,
     MainPage,
-    MenuPage
+    MenuPage,
+    AccountPage,
+    TransactionPage,
+    CardPage
   ],
   providers: [
     StatusBar,
      Facebook,
      GooglePlus,
     SplashScreen,
+    userService, Stripe,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

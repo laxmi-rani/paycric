@@ -48,5 +48,13 @@
     "variables": {
       "REVERSED_CLIENT_ID": "com.googleusercontent.apps.51248339906-d50f8ctinp6d4uc25e3tk1cfl9jsd2s7"
     }
+  },
+  "cordova-plugin-stripe": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-stripe"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TransactionPage } from '../transaction/transaction';
+import { AccountPage } from '../account/account';
 
 /**
  * Generated class for the MainPage page.
@@ -22,4 +24,12 @@ export class MainPage {
     console.log('ionViewDidLoad MainPage');
   }
 
+  onTransaction()
+  {
+    this.navCtrl.push(TransactionPage);
+  }
+  onAccount()
+  {
+    this.navCtrl.push(AccountPage);
+  }
 }
